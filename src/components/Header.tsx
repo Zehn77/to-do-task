@@ -8,7 +8,7 @@ export const Header = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <div>
-      <div className="flex md:min-w-md min-w-sm items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm  dark:bg-gray-800 dark:border-gray-700 ">
+      <div className="flex items-center justify-between">
         <h5 className="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           Список задач
         </h5>
