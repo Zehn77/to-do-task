@@ -1,13 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import { Action } from "@/store/todoReducer";
 
-export const AddTaskForm = () => {
+interface AddTaskFormProps {
+  dispatch: React.Dispatch<Action>;
+}
+
+export const AddTaskForm = ({ dispatch }: AddTaskFormProps) => {
   const [text, setText] = useState("");
 
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(text);
+    dispatch({ type: "ADD", title: text });
+    setText("");
   };
 
   return (
